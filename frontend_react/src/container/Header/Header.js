@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.scss'
 import {easeInOut, motion} from 'framer-motion'
 import images from '../../constants/images'
+import { AppWrap } from '../../Wrapper'
 const scaleVariants={
   whileInView:{
     scale:[0,1],
@@ -14,7 +15,7 @@ const scaleVariants={
 }
 const Header = () => {
   return (
-    <div id="home" className="app__header app__flex">
+    <div  className="app__header app__flex">
       <motion.div
         whileInView={{x:[-100,0]}}
         transition={{duration:0.5}}
@@ -42,7 +43,7 @@ const Header = () => {
         transition={{duration:0.5,delayChildren:0.5}}
         className='app__header-img'
         >
-          <img src={images.profile} alt='profile_bg'/>
+          <img src={images.profile_picture} alt='profile_bg'/>
           <motion.img
             whileInView={{scale:[0,1]}}
             transition={{duration:1,ease:easeInOut}}
@@ -79,4 +80,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default AppWrap(Header,'home')

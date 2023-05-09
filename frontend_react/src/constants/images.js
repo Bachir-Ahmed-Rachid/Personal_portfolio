@@ -34,7 +34,7 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
-import profile_picture from '../assets/profile_picture.jpg'
+import profile_picture from '../assets/profile_picture.png'
 export default {
   email,
   mobile,
