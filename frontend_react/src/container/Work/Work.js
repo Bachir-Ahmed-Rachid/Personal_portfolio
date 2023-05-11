@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {motion} from 'framer-motion'
 import {client, urlFor} from '../../client'
-import { AppWrap } from '../../Wrapper'
+import { AppWrap, MotionWrap } from '../../Wrapper'
 import './Work.scss'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 const work_items=['Algorithms','React','Django','NodeJs','All']
@@ -60,7 +60,7 @@ const Work = () => {
                 transition={{duration:0.5,ease:'easeInOut'}}
                 className='app__work-hover app__flex'
                 >
-                  <a href={element.projectLink} target='_blank' >
+                  <a href={element.projectLink} target='_blank' rel="noreferrer">
                     <motion.div
                     whileInView={{scale:[0,1]}}
                     whileHover={{scale:[1,0.9]}}
@@ -71,7 +71,7 @@ const Work = () => {
                     </motion.div>
                   </a>
 
-                  <a href={element.codeLink} target='_blank' >
+                  <a href={element.codeLink} target='_blank' rel="noreferrer">
                     <motion.div
                     whileInView={{scale:[0,1]}}
                     whileHover={{scale:[1,0.9]}}
@@ -98,4 +98,7 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work,'work')
+export default AppWrap(
+  MotionWrap(Work,'app__works'),
+  'work',
+  'whitebg')

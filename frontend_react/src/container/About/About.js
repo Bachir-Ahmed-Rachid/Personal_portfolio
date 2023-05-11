@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './About.scss'
 import { motion} from 'framer-motion'
 import {client, urlFor} from '../../client'
-import { AppWrap } from '../../Wrapper'
+import { AppWrap, MotionWrap } from '../../Wrapper'
 const About = () => {
   const [abouts, setAbouts] = useState([])
   useEffect(() => {
@@ -14,8 +14,9 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>I Know that <span>Good Design </span>Means <span>Good Business</span></h2>
-
+      <h2 className='head-text'>
+      <span>Building </span>digital solutions to real-world <span>problems </span>is my <span>passion</span>.
+      </h2>
       <div className='app__profiles'>
         {abouts.map((about,index)=>(
           <motion.div
@@ -35,4 +36,8 @@ const About = () => {
   )
 }
 
-export default AppWrap(About,'about')
+export default AppWrap(
+  MotionWrap(About,'app__about'),
+  'about',
+  "app__whitebg"
+  )

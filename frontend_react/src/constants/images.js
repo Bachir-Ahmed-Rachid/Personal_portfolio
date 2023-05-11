@@ -35,6 +35,9 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import profile_picture from '../assets/profile_picture.png'
+import pict_profil_1 from '../assets/pict_profil_1.png'
+import pict_profil_2 from '../assets/pict_profil_2.png'
+import logo_bachir_ahmed from '../assets/logo_bachir_ahmed.png'
 export default {
   email,
   mobile,
@@ -69,5 +72,8 @@ export default {
   nb,
   skype,
   spotify,
-  profile_picture
+  profile_picture,
+  pict_profil_2,
+  pict_profil_1,
+  logo_bachir_ahmed,
 };

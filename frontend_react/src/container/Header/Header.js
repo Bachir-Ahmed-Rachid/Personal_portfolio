@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.scss'
 import {easeInOut, motion} from 'framer-motion'
 import images from '../../constants/images'
-import { AppWrap } from '../../Wrapper'
+import { AppWrap, MotionWrap } from '../../Wrapper'
 const scaleVariants={
   whileInView:{
     scale:[0,1],
@@ -26,13 +26,13 @@ const Header = () => {
               <span>👋</span>
               <div style={{marginLeft:20}}>
                   <p className='p-text'>Hello ,I am</p>
-                  <h1 className='head-text'>AHMED</h1>
+                  <h1 className='head-text'>BACHIR</h1>
               </div>
             </div>
 
             <div className='tag-cmp app__flex'>
+                <p className='p-text'>Junior Full stack </p>
                 <p className='p-text'>Web Developer</p>
-                <p className='p-text'>Freelancer</p>
             </div>
           </div>
       </motion.div>
@@ -43,7 +43,7 @@ const Header = () => {
         transition={{duration:0.5,delayChildren:0.5}}
         className='app__header-img'
         >
-          <img src={images.profile_picture} alt='profile_bg'/>
+          <img src={images.pict_profil_1} alt='profile_bg'/>
           <motion.img
             whileInView={{scale:[0,1]}}
             transition={{duration:1,ease:easeInOut}}
@@ -61,11 +61,16 @@ const Header = () => {
         className='app__header-circles'
       >
           {[
-            images.react,
-            images.redux,
+            images.html,
+            images.css,
+            images.mu5,
             images.javascript,
-            images.git,
+            images.react,
+            images.node,
+            images.redux,
             images.python,
+            images.git,
+            images.api,
             ].map((circle,index)=>(
 
               <div className='circle-cmp app__flex' key={index}>
@@ -80,4 +85,6 @@ const Header = () => {
   )
 }
 
-export default AppWrap(Header,'home')
+export default AppWrap(
+  MotionWrap(Header,'app__header')
+  ,'home')

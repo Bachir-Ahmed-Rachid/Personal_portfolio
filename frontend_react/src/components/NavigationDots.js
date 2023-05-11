@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NavigationDots = ({active}) => {
-const elements_navbar=['home','about','work','skills','testimonials']
+const elements_navbar=['home','about','work','skills','testimonials','contact']
 
   return (
     <div className='app__navigation'>
