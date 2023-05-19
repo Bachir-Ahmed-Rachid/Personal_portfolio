@@ -21,6 +21,8 @@ const Skills = () => {
     client.fetch(experiencesQuery)
           .then((data)=>{
             setExperiences(data)
+            console.log(data)
+
           })
 
   }, [])
@@ -67,6 +69,7 @@ const Skills = () => {
                                     >
                                       <h4 className='bold-text'>{work.name}</h4>
                                       <p className='p-text'>{work.company}</p>
+                                      <h5>{work.desc}</h5>
 
                                   </motion.div>
                                     <Tooltip
@@ -74,7 +77,7 @@ const Skills = () => {
                                         effect="solid"
                                         arrowColor="#fff"
                                         className="skills-tooltip">
-                                        {work.desc}
+                                        
                                   </Tooltip>
                               </>
                             

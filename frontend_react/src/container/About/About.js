@@ -6,8 +6,6 @@ import { AppWrap, MotionWrap } from '../../Wrapper'
 const About = () => {
   const [abouts, setAbouts] = useState([])
   useEffect(() => {
-    console.log('you are in about')
-
     const query='*[_type =="abouts"]'
     client.fetch(query).then((data)=>setAbouts(data))
       }, [])
