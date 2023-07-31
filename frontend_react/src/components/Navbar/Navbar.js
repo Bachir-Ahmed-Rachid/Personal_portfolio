@@ -3,7 +3,7 @@ import './Navbar.scss'
 import {HiMenuAlt4,HiX} from 'react-icons/hi'
 import {images} from '../../constants/index'
 import {motion} from 'framer-motion'
-const elements_navbar=['home','work','about','skills','testimonials']
+const elements_navbar=['home','about','work','skills','testimonials']
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
